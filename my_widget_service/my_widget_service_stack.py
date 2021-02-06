@@ -1,5 +1,6 @@
 from aws_cdk import core
 
+from . import widget_service
 
 class MyWidgetServiceStack(core.Stack):
 
@@ -7,3 +8,4 @@ class MyWidgetServiceStack(core.Stack):
         super().__init__(scope, construct_id, **kwargs)
 
         # The code that defines your stack goes here
+        widget_service.WidgetService(self, "Widgets")
